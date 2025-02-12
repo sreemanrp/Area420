@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area 420</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title and Description -->
+        <div class="title">Area 420</div>
+        <div class="description">
+            Please be respectful & responsive. This website provides access to all the assignments, tutorials, and workbook PDFs for free.
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-bar" id="search-bar" placeholder="Search..." oninput="searchSubjects()">
+        </div>
+
+        <!-- File Names -->
+        <div class="file-names" id="file-names">
+            <div class="file-name"><a href="#" onclick="showPage('CSE')">CSE</a></div>
+            <div class="file-name"><a href="#" onclick="showPage('AI&DS')">AI&DS</a></div>
+            <div class="file-name"><a href="#" onclick="showPage('CSIT')">CSIT</a></div>
+        </div>
+
+        <!-- Content Pages (dynamically displayed) -->
+        <div id="CSE" class="content-page">
+            <h3>CSE Subjects</h3>
+            <div class="subject-list">
+                <a href="#" onclick="showResources('FSAD')">FSAD</a><br>
+                <a href="#" onclick="showResources('MP')">MP</a><br>
+                <a href="#" onclick="showResources('AOOP')">AOOP</a><br>
+                <a href="#" onclick="showResources('DBMS')">DBMS</a>
+            </div>
+        </div>
+
+        <div id="AI&DS" class="content-page">
+            <h3>AI&DS Subjects</h3>
+            <div class="subject-list">
+                <a href="#" onclick="showResources('DL')">DL</a><br>
+                <a href="#" onclick="showResources('FSAD')">FSAD</a><br>
+                <a href="#" onclick="showResources('DAA')">DAA</a><br>
+                <a href="#" onclick="showResources('MP')">MP</a>
+            </div>
+        </div>
+
+        <div id="CSIT" class="content-page">
+            <h3>CSIT Subjects</h3>
+            <div class="subject-list">
+                <a href="#" onclick="showResources('FSAD')">FSAD</a><br>
+                <a href="#" onclick="showResources('MP')">MP</a><br>
+                <a href="#" onclick="showResources('AOOP')">AOOP</a><br>
+                <a href="#" onclick="showResources('DBMS')">DBMS</a>
+            </div>
+        </div>
+
+        <!-- Resource List -->
+        <div id="resources" class="content-page">
+            <h3>Resources for <span id="subject-name"></span></h3>
+            <div class="resource-list">
+                <a href="#" onclick="showAssignments()">Assignments</a><br>
+                <a href="#" onclick="showTutorials()">Tutorials</a><br>
+                <a href="#" onclick="showLWorkbooks()">L Workbook</a><br>
+                <a href="#" onclick="showSWorkbooks()">S Workbook</a>
+            </div>
+        </div>
+
+        <!-- Assignment List -->
+        <div id="assignments" class="content-page">
+            <h3>Assignments</h3>
+            <div class="assignment-list">
+                <a href="#">Assignment 1</a><br>
+                <a href="#">Assignment 2</a><br>
+                <a href="#">Assignment 3</a><br>
+                <a href="#">Assignment 4</a>
+            </div>
+        </div>
+
+        <!-- Tutorials List -->
+        <div id="tutorials" class="content-page">
+            <h3>Tutorials</h3>
+            <div class="assignment-list">
+                <a href="#">Tutorial 1</a><br>
+                <a href="#">Tutorial 2</a><br>
+                <a href="#">Tutorial 3</a><br>
+                <a href="#">Tutorial 4</a>
+            </div>
+        </div>
+
+        <!-- L Workbooks List -->
+        <div id="l-workbooks" class="content-page">
+            <h3>L Workbooks</h3>
+            <div class="assignment-list">
+                <a href="#">Week 1</a><br>
+                <a href="#">Week 2</a><br>
+                <a href="#">Week 3</a><br>
+                <a href="#">Week 4</a>
+            </div>
+        </div>
+
+        <!-- S Workbooks List -->
+        <div id="s-workbooks" class="content-page">
+            <h3>S Workbooks</h3>
+            <div class="assignment-list">
+                <a href="#">Week 1</a><br>
+                <a href="#">Week 2</a><br>
+                <a href="#">Week 3</a><br>
+                <a href="#">Week 4</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Icon -->
+    <div class="question-icon" onclick="toggleHelpOptions()">?</div>
+
+    <!-- Help Options -->
+    <div class="help-options" id="help-options">
+        <a href="/" onclick="helpFAQ()">Help & FAQ</a>
+        <a href="https://telegram.com" target="_blank">Telegram</a>
+        <a href="/login" target="_blank">Login</a>
+        <a href="/" onclick="showUpload()">Upload</a>
+    </div>
+
+    <!-- Login Popup -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+            <p>Please login to use the website</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
